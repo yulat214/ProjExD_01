@@ -9,6 +9,10 @@ def main():
     bg_img = pg.image.load("fig/pg_bg.jpg")
     fw_img = pg.image.load("fig/3.png")
     fw_img = pg.transform.flip(fw_img, True, False)
+    fw_r_img = pg.transform.rotozoom(fw_img, 10, 1.0)
+    
+    img_lst = [fw_img, fw_r_img]
+    
     tmr = 0
     while True:
         for event in pg.event.get():
