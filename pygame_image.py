@@ -14,15 +14,22 @@ def main():
     img_lst = [fw_img, fw_r_img]
     
     tmr = 0
+    x = 0
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img, [0, 0])
-        screen.blit(fw_img, [300, 200])
+        screen.blit(bg_img, [-x, 0])
+        screen.blit(bg_img, [1600-x, 0])
+        
+        screen.blit(img_lst[tmr%2-1], [300, 200])
+        
+        
         pg.display.update()
-        tmr += 1        
-        clock.tick(10)
+        tmr += 1   
+        x += 1
+        clock.tick(300)
 
 
 if __name__ == "__main__":
