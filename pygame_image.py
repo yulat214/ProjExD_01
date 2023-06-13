@@ -26,8 +26,11 @@ def main():
             
         fw_rr_img = pg.transform.rotozoom(fw_img, angle%50, 1.0)
             
-        screen.blit(bg_img, [-(x%1600), 0])
-        screen.blit(bg_r_img, [1600-(x%1600), 0])
+        screen.blit(bg_img, [-(x%3200), 0])
+        screen.blit(bg_r_img, [3200-(x%3200), 0])
+        screen.blit(bg_r_img, [-(x%3200), 0])
+        screen.blit(bg_img, [1600-(x%3200), 0])
+        
         
         #screen.blit(img_lst[tmr%2], [300, 200])
         screen.blit(fw_rr_img, [300, 200])
